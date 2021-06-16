@@ -1,24 +1,31 @@
-# vue3_electron
+# vue3 + electron套件，自用
 
-## Project setup
+
 ```
+// 安装依赖
 npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
+// 单独启动vue服务
 npm run serve
+
+// 启动套件服务，用于本地开发
+npm run electron:serve
 ```
 
-### Compiles and minifies for production
 ```
-npm run build
+// 编译生成安装包
+npm run electron:build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 重要配置修改
+- vue.config.js 中增加pluginOptions.electronBuilder.builderOptions 配置编译构建参数
+- src/router/index.js 中修改路由model为hash, electeon只支持hash模式
+
+### 依赖
+[vue-cli-plugin-electron-builder](https://github.com/nklayman/vue-cli-plugin-electron-builder)
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
