@@ -23,7 +23,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // electron只支持hash协议路由，history会导致页面空白
+  mode: process.env.IS_ELECTRON ? 'hash' : 'history',
   base: process.env.BASE_URL,
   routes
 })
