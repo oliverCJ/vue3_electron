@@ -29,9 +29,9 @@ async function createWindow() {
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
     if (!process.env.IS_TEST) win.webContents.openDevTools()
   } else {
-    createProtocol('xjbtfb-club')
+    createProtocol('myapp')
     // Load the index.html when not in development
-    win.loadURL('xjbtfb-club://./index.html')
+    win.loadURL('myapp://./index.html')
   }
 }
 

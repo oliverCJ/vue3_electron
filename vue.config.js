@@ -2,11 +2,11 @@ module.exports = {
     pluginOptions: {
         electronBuilder: {
             // 自定义协议，同时需要修改background.js中的load    
-            customFileProtocol: 'xjbtfb-club://./',
+            customFileProtocol: 'myapp://./',
             // build参数
             builderOptions: {
-                appId: 'club.xjbtfb',
-                productName: 'XJBT FootBall Club',
+                appId: 'com.myapp',
+                productName: 'myapp Desc',
                 electronDownload: {
                 mirror: "https://npm.taobao.org/mirrors/electron/"
                 },
